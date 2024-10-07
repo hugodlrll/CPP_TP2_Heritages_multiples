@@ -34,6 +34,8 @@ public:
     virtual void depanner();
     
     virtual void accelerer(int increment);
+
+    virtual void freiner(int increment);
     
     virtual void monter(int nbOcc);
 
@@ -45,7 +47,6 @@ public:
     
     virtual ~Vehicule();
     friend ostream& operator<<(ostream& s,Vehicule const& v);
-
 };
 
 // opérateur d'affichage
