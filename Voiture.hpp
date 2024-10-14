@@ -3,7 +3,7 @@
 
 #include "Vehicule.hpp"
 
-class Voiture : virtual public Vehicule // virtual pour que les membres de Véhicules apparaissent une seule fois dans VoitureAmphibie
+class Voiture : public Vehicule // virtual pour que les membres de Véhicules apparaissent une seule fois dans VoitureAmphibie
 { 
     public:
         Voiture();

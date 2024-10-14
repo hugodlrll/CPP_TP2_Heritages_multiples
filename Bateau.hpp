@@ -5,7 +5,7 @@
 
 using namespace std;
 
-class Bateau : virtual public Vehicule // virtual pour que les membres de Véhicules apparaissent une seule fois dans VoitureAmphibie
+class Bateau : public Vehicule // virtual pour que les membres de Véhicules apparaissent une seule fois dans VoitureAmphibie
 {
     public:  
         Bateau();

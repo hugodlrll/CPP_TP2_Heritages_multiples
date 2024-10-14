@@ -8,6 +8,7 @@ class VoitureAmphibie : public Voiture, public Bateau
 {
     public:
         VoitureAmphibie();
+        void afficheAttributs();
 };
 
 #endif

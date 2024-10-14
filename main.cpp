@@ -155,10 +155,7 @@ int main() {
 
     //démarrer et arrêter le véhicule amphibie
     cout << "Test du véhicule amphibie" << endl;
-    va.Voiture::demarrer();
-    va.Bateau::demarrer();
-    va.Bateau::arreter();
-    va.Voiture::arreter();
-    
+    va.afficheAttributs();
+        
     return 0;
 }
