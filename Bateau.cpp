@@ -2,8 +2,7 @@
 
 using namespace std;
 
-Bateau::Bateau(){
-    
+Bateau::Bateau(): Vehicule(150, 5, 1){ // Construction d'un Bateau   
 }
 
 void Bateau::demarrer(){

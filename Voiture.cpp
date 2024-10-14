@@ -2,8 +2,7 @@
 
 using namespace std;
 
-Voiture::Voiture(){
-
+Voiture::Voiture() : Vehicule(150, 5, 1){ // Construction d'un véhicule 
 }
 
 void Voiture::demarrer(){

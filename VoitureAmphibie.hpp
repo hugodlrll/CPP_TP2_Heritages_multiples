@@ -4,18 +4,10 @@
 #include "Voiture.hpp"
 #include "Bateau.hpp"
 
-class VoitureAmphibie : protected Bateau, Voiture
+class VoitureAmphibie : public Voiture, public Bateau
 {
     public:
-        VoitureAmphibie(int TypeVehicule = TERRE);
-        virtual void demarrer();
-        virtual void arreter();
-        virtual void transformers();
-        virtual void getType();
-        
-    private:
-        enum TypeTerrain {TERRE = false, EAU = true};
-        bool TypeVehicule_;
+        VoitureAmphibie();
 };
 
 #endif

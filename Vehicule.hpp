@@ -25,27 +25,27 @@ protected:
 public:
     enum EtatVehicule {ARRET, MARCHE, PANNE_LEGERE, PANNE_SEVERE};
     
-    Vehicule(int vitesseMax=0, int nbPlaces=1, int occupants=0);
+    Vehicule(int vitesseMax=0, int nbPlaces=1, int occupants=0); // Constructeur par défaut
     
-    virtual void demarrer();
+    void demarrer();
     
-    virtual void arreter();
+    void arreter();
     
-    virtual void depanner();
+    void depanner();
     
-    virtual void accelerer(int increment);
+    void accelerer(int increment);
 
-    virtual void freiner(int increment);
+    void freiner(int increment);
     
-    virtual void monter(int nbOcc);
+    void monter(int nbOcc);
 
-    virtual void descendre(int nbOcc);
+    void descendre(int nbOcc);
 
-    virtual void mettreEnPanne(double random);
+    void mettreEnPanne(double random);
     
-    virtual string getEtat() const;
+    string getEtat() const;
     
-    virtual ~Vehicule();
+    ~Vehicule();
     friend ostream& operator<<(ostream& s,Vehicule const& v);
 };
 

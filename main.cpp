@@ -1,5 +1,8 @@
 #include <iostream>
 #include "Vehicule.hpp"
+#include "Voiture.hpp"
+#include "Bateau.hpp"
+#include "VoitureAmphibie.hpp"
 #include <cstdlib> // Pour utiliser rand()
 #include <ctime>   // Pour initialiser le générateur de nombre aléatoire
 
@@ -9,6 +12,9 @@ int main() {
 
     // Création d'un véhicule avec une vitesse max de 150, 5 places et 2 occupants
     Vehicule v(150, 5, 2);
+    Voiture voit;
+    Bateau bat;
+    VoitureAmphibie va;
     std::cout << v << std::endl;
 
     // Essai de démarrage
@@ -108,7 +114,7 @@ int main() {
 
     // Essai descendre du véhicule
     try {
-        std::cout << "1 - descendre le véhicule..." << std::endl;
+        std::cout << "1 - descendre du véhicule..." << std::endl;
         v.descendre(2);
         std::cout << v << std::endl;
     } catch (const std::invalid_argument& e) {
@@ -116,7 +122,7 @@ int main() {
     }
 
     try {
-        std::cout << "2 - descendre le véhicule..." << std::endl;
+        std::cout << "2 - descendre du véhicule..." << std::endl;
         v.descendre(10);
         std::cout << v << std::endl;
     } catch (const std::invalid_argument& e) {
@@ -132,10 +138,27 @@ int main() {
         std::cerr << "Erreur pour monter dans le véhicule : " << e.what() << std::endl;
     }
 
-    //mettre la voiture en panne
+    // mettre la voiture en panne
     cout << v;
     v.mettreEnPanne(random);
     cout << v;
 
+    // démarrer et arrêter la voiture
+    cout << "Test de la voiture" << endl;
+    voit.demarrer();
+    voit.arreter();
+
+    // démarrer et arrêter le bateau
+    cout << "Test du bateau" << endl;
+    bat.demarrer();
+    bat.arreter();
+
+    //démarrer et arrêter le véhicule amphibie
+    cout << "Test du véhicule amphibie" << endl;
+    va.Voiture::demarrer();
+    va.Bateau::demarrer();
+    va.Bateau::arreter();
+    va.Voiture::arreter();
+    
     return 0;
 }
